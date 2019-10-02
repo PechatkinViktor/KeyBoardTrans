@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#09947E</color>
+    <color name="colorPrimaryDark">#006F5F</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorCheckBox">#51CF1B</color>
+    <color name="white">#FFF</color>
+    <color name="cpBad">#FC0000</color>
+    <color name="cpNotBad">#FFE99313</color>
+    <color name="cpGood">#72DF04</color>
+    <color name="cpPentagon">#BD00AA</color>
+    <color name="chekbox_tint">#F35976</color>
+    <color name="edittext_tint">#FFF35976</color>
+    <color name="seekBar_tint">#FFF35976</color>
+</resources>

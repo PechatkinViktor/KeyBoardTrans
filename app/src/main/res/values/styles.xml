@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="ResultSet">
+        <item name="android:textSize">32sp</item>
+    </style>
+    <style name="copy_button">
+        <item name="android:src">@drawable/ic_content_copy_black_24dp</item>
+        <item name="android:padding">@dimen/copy_button</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+    <style name="text_on_checkbox">
+        <item name="android:paddingBottom">@dimen/vertical_margin</item>
+        <item name="android:paddingTop">@dimen/vertical_margin</item>
+    </style>
+</resources>
