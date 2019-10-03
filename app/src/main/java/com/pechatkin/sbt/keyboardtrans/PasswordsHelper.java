@@ -35,6 +35,7 @@ public class PasswordsHelper {
     public String check(CharSequence sourse) {
         int passLen = sourse.length();
         if(passLen == 0) {
+            // CHECK: никогда, ни при каких условиях не следует хардкодить UI-текст!
             return "Ожидание ввода";
         }else if((passLen > 0) && (passLen < 4)) {
             return checkPass[1];

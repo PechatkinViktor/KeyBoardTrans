@@ -141,6 +141,8 @@ public class MainActivity extends Activity {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                // CHECK: никогда, ни при каких условиях не следует хардкодить UI-текст!
+                // CHECK: и ещё я тут ожидал использование plurals
                 textSeek.setText("Символов: " + progress);
                 seekProgress = progress;
                 generateButton.setEnabled(progress > 0);
