@@ -33,7 +33,11 @@ public class MainActivity extends Activity {
 
     private String[] russians;
     private String[] latin;
+    private String[] checkPassValue;
+    private String[] kastyl;
     private int seekProgress;
+    private String itsA;
+
     private PasswordsHelper helper;
 
     private View coppyButton;
@@ -61,6 +65,9 @@ public class MainActivity extends Activity {
 
         russians = getResources().getStringArray(R.array.russians);
         latin = getResources().getStringArray(R.array.latin);
+        checkPassValue = getResources().getStringArray(R.array.check_pass);
+        kastyl = getResources().getStringArray(R.array.kastyl);
+        itsA = getResources().getString(R.string.its_a);
 
         coppyButton = findViewById(R.id.button_copy_password);
         coppyButton.setEnabled(false);
@@ -69,7 +76,7 @@ public class MainActivity extends Activity {
         checkPass = findViewById(R.id.check_pass_view);
         generateButton = findViewById(R.id.button_generate);
 
-        helper = new PasswordsHelper(russians, latin);
+        helper = new PasswordsHelper(russians, latin, checkPassValue);
 
         checkCaps = findViewById(R.id.check_caps);
         checkNums = findViewById(R.id.check_nums);
@@ -155,16 +162,16 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 StringBuilder genResult = new StringBuilder();
                 for(int i = 0; i< seekProgress; i++) {
-                    genResult.append("a");
+                    genResult.append(itsA);
                 }
-                if(checkCaps.isChecked() && genResult.indexOf("a") != -1) {
-                    genResult.replace(genResult.indexOf("a"), genResult.indexOf("a")+1, "A");
+                if(checkCaps.isChecked() && genResult.indexOf(itsA) != -1) {
+                    genResult.replace(genResult.indexOf(itsA), genResult.indexOf(itsA)+1, kastyl[0]);
                 }
-                if(checkNums.isChecked() && genResult.indexOf("a") != -1) {
-                    genResult.replace(genResult.indexOf("a"), genResult.indexOf("a")+1, "1");
+                if(checkNums.isChecked() && genResult.indexOf(itsA) != -1) {
+                    genResult.replace(genResult.indexOf(itsA), genResult.indexOf(itsA)+1, kastyl[1]);
                 }
-                if(checkSimvs.isChecked() && genResult.indexOf("a") != -1) {
-                    genResult.replace(genResult.indexOf("a"), genResult.indexOf("a")+1, "%");
+                if(checkSimvs.isChecked() && genResult.indexOf(itsA) != -1) {
+                    genResult.replace(genResult.indexOf(itsA), genResult.indexOf(itsA)+1, kastyl[2]);
                 }
                 resultTextViewGenerate.setText(genResult);
                 generateCopyButton.setEnabled(resultTextViewGenerate.length() > 0);

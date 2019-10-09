@@ -4,10 +4,12 @@ public class PasswordsHelper {
 
     private final String[] russians;
     private final String[] latins;
+    private final String[] checkPass;
 
-    public PasswordsHelper(String[] russians, String[] latins) {
+    public PasswordsHelper(String[] russians, String[] latins, String[] checkPass) {
         this.russians = russians;
         this.latins = latins;
+        this.checkPass = checkPass;
     }
 
     public String convert(CharSequence sourse) {
@@ -35,15 +37,15 @@ public class PasswordsHelper {
         if(passLen == 0) {
             return "Ожидание ввода";
         }else if((passLen > 0) && (passLen < 4)) {
-            return "Плохо";
+            return checkPass[1];
         }else if((passLen >= 4) && (passLen < 8)) {
-            return "Слишком простой";
+            return checkPass[2];
         } else if(passLen == 8) {
-            return "Неплохо";
+            return checkPass[3];
         } else if((passLen > 8) && (passLen < 12)) {
-            return "Хорошо";
+            return checkPass[4];
         } else {
-            return "Пентагон";
+            return checkPass[5];
         }
     }
 }

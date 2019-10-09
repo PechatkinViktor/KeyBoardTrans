@@ -12,15 +12,22 @@
     <string name="text_on_checkbox">Сгенерируйте новый пароль ему на замену</string>
     <string name="check_pass_text">Ожидание ввода</string>
     <string name="text_seekBar">Символов: 0</string>
+    <string name="its_a">a</string>
 
     <plurals name="symbols_count">
-        <item quantity="one">символ</item>
-        <item quantity="two">символа</item>
-        <item quantity="few">символа</item>
-        <item quantity="many">символов</item>
-        <item quantity="other">символов</item>
+        <item quantity="zero">%d символов</item>
+        <item quantity="one">%d символ</item>
+        <item quantity="two">%d символа</item>
+        <item quantity="few">%d символа</item>
+        <item quantity="many">%d символов</item>
+        <item quantity="other">%d символов</item>
     </plurals>
 
+    <string-array name="kastyl">
+        <item>A</item>
+        <item>1</item>
+        <item>%</item>
+    </string-array>
     <string-array name="russians">
         <item>й</item>
         <item>ц</item>
@@ -92,5 +99,13 @@
         <item>\.</item>
         <item>\/</item>
         <item>\`</item>
+    </string-array>
+    <string-array name="check_pass">
+        <item>Ожидание ввода</item>
+        <item>Плохо</item>
+        <item>Слишком простой</item>
+        <item>Неплохо</item>
+        <item>Хорошо</item>
+        <item>Пентагон</item>
     </string-array>
 </resources>
